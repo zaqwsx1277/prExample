@@ -20,7 +20,8 @@ namespace exampleDefine {
     static std::atomic <quint32> logNumLine (0) ;       ///< Количество строк в логе
     static std::atomic <bool> isStop (false) ;          ///< Признак завершения задания при нажатии на кнопку Стоп
     static std::mutex muRefresh ;                       ///< mutex для ожидания записи в модель отображения лога
-    static std::condition_variable cvRefresh ;          ///< Условная переменная для синхронизации доступа к модели отображения лога. Возможность ложного срабатывания не учитывалась.
+    static std::condition_variable cvRefresh ;          ///< Условная переменная для синхронизации доступа к модели отображения лога.
+    static std::atomic <bool> isBloked (false) ;        ///< Флаг блокировки добавления в контейнер. Нужен для предотвращения "ложного срабатывания"
 
     const quint32 example11Timer {1000} ;               ///< Период срабатывания таймера в Пример 1
     const quint32 waitTimer {10000} ;                   ///< Период ожидания завершения всех потоков при нажатой кнопке Стоп

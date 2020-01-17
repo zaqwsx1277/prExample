@@ -126,12 +126,14 @@ void TExample1LogModel::push_back (exampleDefine::example1LogData inItem)
     qDebug () << "Добавление в лог (блокировка): " << threadHash (threadId) ;
     {
         std::unique_lock <std::mutex> blockPushBack (exampleDefine::muRefresh) ;// блокируем допуск остальным потокaм на работу с контейнером
-        exampleDefine::cvRefresh.wait(blockPushBack);
+        exampleDefine::cvRefresh.wait(blockPushBack, [] { return !exampleDefine::isBloked ; });
+        exampleDefine::isBloked = true ;
 
         inItem.numLine = exampleDefine::logNumLine.fetch_add (1) + 1 ;
         if ((inItem.numLine  % exampleDefine::logLineMaxCount) == 0) slotClearModel () ;
 
         std::vector <exampleDefine::example1LogData>::push_back(inItem);
+        exampleDefine::isBloked = false ;
     }
     qDebug () << "Добавление в лог (освобождение): " << threadHash (threadId) ; // разблокируем один из ожидающих потоков
     exampleDefine::cvRefresh.notify_one();

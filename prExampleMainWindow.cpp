@@ -368,9 +368,11 @@ void prExampleMainWindow::refreshLog ()
     qDebug () << "Обновление лога (блокировка): " ;
 
     {
+        exampleDefine::isBloked = true ;
         std::lock_guard <std::mutex> lockRefresh (exampleDefine::muRefresh) ;
         fPrtExampleModel -> refreshView() ;         // Обновляем отображение данных
         QApplication::processEvents() ;
+        exampleDefine::isBloked = false ;
     }
 }
 //---------------------------------------------------------------------------
