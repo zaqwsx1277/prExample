@@ -1,0 +1,211 @@
+\hypertarget{class_t_example1_log_model}{}\section{T\+Example1\+Log\+Model Class Reference}
+\label{class_t_example1_log_model}\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+
+
+{\ttfamily \#include $<$example1\+Log\+Model.\+hpp$>$}
+
+
+
+Inheritance diagram for T\+Example1\+Log\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_t_example1_log_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+Example1\+Log\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_t_example1_log_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_t_example1_log_model_ad94610473fbd8834e350061f60e92f95}{slot\+Clear\+Model} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_t_example1_log_model_ad94610473fbd8834e350061f60e92f95}{T\+Example1\+Log\+Model\+::slot\+Clear\+Model} Слот очищающий модель \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_example1_log_model_a683a810bee1b3bac7175d320978aa915}{T\+Example1\+Log\+Model} (Q\+Object $\ast$parent=nullptr)
+\item 
+int \hyperlink{class_t_example1_log_model_a878b1dde0fbca43a40dbec1ea5e3109c}{row\+Count} (const Q\+Model\+Index \&parent) const
+\item 
+int \hyperlink{class_t_example1_log_model_aac991c4c9946cc0aaf8bf19284730418}{column\+Count} (const Q\+Model\+Index \&parent=Q\+Model\+Index()) const
+\item 
+Q\+Variant \hyperlink{class_t_example1_log_model_af60e29db85fceba45bc87abbc70cb322}{data} (const Q\+Model\+Index \&index, int role) const
+\item 
+Q\+Variant \hyperlink{class_t_example1_log_model_adb2eb0cb6da284368ee357e6e737c48c}{header\+Data} (int section, Qt\+::\+Orientation orientation, int role=Qt\+::\+Display\+Role) const
+\item 
+void \hyperlink{class_t_example1_log_model_ac65587677b307f28f624491de852177a}{push\+\_\+back} (const \hyperlink{structexample_define_1_1example1_log_data}{example\+Define\+::example1\+Log\+Data} in\+Item)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_t_example1_log_model_ac65587677b307f28f624491de852177a}{T\+Example1\+Log\+Model\+::push\+\_\+back} Добавляем в модель запись о сгенерированном числе \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138d}{column\+Number} \{ \newline
+\hyperlink{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da30a664ca598280d4d89c903fc50693ee}{cn\+Time} = 0, 
+\hyperlink{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da27aaa5f508929e02d97434e5e7cd1093}{cn\+Thread\+Id}, 
+\hyperlink{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138daf24ceb67117dd9665cd42939a24b3f71}{cn\+Numeric}, 
+\hyperlink{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da9785852fcff74e0cbf608d31d0591db0}{cn\+Reason\+Exit}, 
+\newline
+\hyperlink{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138dac45cba205e366952a3811663f52fa2fa}{cn\+Count}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \hyperlink{class_t_example1_log_model_af19d00cf74d3dc54e2ba8ddd015d4dc6}{f\+Refresh}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 13 of file example1\+Log\+Model.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138d}\label{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138d}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!column\+Number@{column\+Number}}
+\index{column\+Number@{column\+Number}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{column\+Number}{columnNumber}}
+{\footnotesize\ttfamily enum \hyperlink{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138d}{T\+Example1\+Log\+Model\+::column\+Number}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cn\+Time@{cn\+Time}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!cn\+Time@{cn\+Time}}}\mbox{\Hypertarget{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da30a664ca598280d4d89c903fc50693ee}\label{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da30a664ca598280d4d89c903fc50693ee}} 
+cn\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cn\+Thread\+Id@{cn\+Thread\+Id}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!cn\+Thread\+Id@{cn\+Thread\+Id}}}\mbox{\Hypertarget{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da27aaa5f508929e02d97434e5e7cd1093}\label{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da27aaa5f508929e02d97434e5e7cd1093}} 
+cn\+Thread\+Id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cn\+Numeric@{cn\+Numeric}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!cn\+Numeric@{cn\+Numeric}}}\mbox{\Hypertarget{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138daf24ceb67117dd9665cd42939a24b3f71}\label{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138daf24ceb67117dd9665cd42939a24b3f71}} 
+cn\+Numeric&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cn\+Reason\+Exit@{cn\+Reason\+Exit}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!cn\+Reason\+Exit@{cn\+Reason\+Exit}}}\mbox{\Hypertarget{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da9785852fcff74e0cbf608d31d0591db0}\label{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138da9785852fcff74e0cbf608d31d0591db0}} 
+cn\+Reason\+Exit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cn\+Count@{cn\+Count}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!cn\+Count@{cn\+Count}}}\mbox{\Hypertarget{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138dac45cba205e366952a3811663f52fa2fa}\label{class_t_example1_log_model_a35176287f620f85dcd35feb1f2bf138dac45cba205e366952a3811663f52fa2fa}} 
+cn\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 26 of file example1\+Log\+Model.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_example1_log_model_a683a810bee1b3bac7175d320978aa915}\label{class_t_example1_log_model_a683a810bee1b3bac7175d320978aa915}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{T\+Example1\+Log\+Model()}{TExample1LogModel()}}
+{\footnotesize\ttfamily T\+Example1\+Log\+Model\+::\+T\+Example1\+Log\+Model (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file example1\+Log\+Model.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_example1_log_model_aac991c4c9946cc0aaf8bf19284730418}\label{class_t_example1_log_model_aac991c4c9946cc0aaf8bf19284730418}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!column\+Count@{column\+Count}}
+\index{column\+Count@{column\+Count}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{column\+Count()}{columnCount()}}
+{\footnotesize\ttfamily int T\+Example1\+Log\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{parent = {\ttfamily QModelIndex()} }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 17 of file example1\+Log\+Model.\+cpp.
+
+\mbox{\Hypertarget{class_t_example1_log_model_af60e29db85fceba45bc87abbc70cb322}\label{class_t_example1_log_model_af60e29db85fceba45bc87abbc70cb322}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!data@{data}}
+\index{data@{data}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily Q\+Variant T\+Example1\+Log\+Model\+::data (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index,  }\item[{int}]{role }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 22 of file example1\+Log\+Model.\+cpp.
+
+\mbox{\Hypertarget{class_t_example1_log_model_adb2eb0cb6da284368ee357e6e737c48c}\label{class_t_example1_log_model_adb2eb0cb6da284368ee357e6e737c48c}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!header\+Data@{header\+Data}}
+\index{header\+Data@{header\+Data}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{header\+Data()}{headerData()}}
+{\footnotesize\ttfamily Q\+Variant T\+Example1\+Log\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{Qt\+::\+Orientation}]{orientation,  }\item[{int}]{role = {\ttfamily Qt\+:\+:DisplayRole} }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 63 of file example1\+Log\+Model.\+cpp.
+
+\mbox{\Hypertarget{class_t_example1_log_model_ac65587677b307f28f624491de852177a}\label{class_t_example1_log_model_ac65587677b307f28f624491de852177a}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily void T\+Example1\+Log\+Model\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const \hyperlink{structexample_define_1_1example1_log_data}{example\+Define\+::example1\+Log\+Data}}]{in\+Item }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_t_example1_log_model_ac65587677b307f28f624491de852177a}{T\+Example1\+Log\+Model\+::push\+\_\+back} Добавляем в модель запись о сгенерированном числе 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Item} & Добавляемая запись \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file example1\+Log\+Model.\+cpp.
+
+\mbox{\Hypertarget{class_t_example1_log_model_a878b1dde0fbca43a40dbec1ea5e3109c}\label{class_t_example1_log_model_a878b1dde0fbca43a40dbec1ea5e3109c}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!row\+Count@{row\+Count}}
+\index{row\+Count@{row\+Count}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{row\+Count()}{rowCount()}}
+{\footnotesize\ttfamily int T\+Example1\+Log\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{parent }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 12 of file example1\+Log\+Model.\+cpp.
+
+\mbox{\Hypertarget{class_t_example1_log_model_ad94610473fbd8834e350061f60e92f95}\label{class_t_example1_log_model_ad94610473fbd8834e350061f60e92f95}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!slot\+Clear\+Model@{slot\+Clear\+Model}}
+\index{slot\+Clear\+Model@{slot\+Clear\+Model}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{slot\+Clear\+Model}{slotClearModel}}
+{\footnotesize\ttfamily void T\+Example1\+Log\+Model\+::slot\+Clear\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_t_example1_log_model_ad94610473fbd8834e350061f60e92f95}{T\+Example1\+Log\+Model\+::slot\+Clear\+Model} Слот очищающий модель 
+
+
+
+Definition at line 96 of file example1\+Log\+Model.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_example1_log_model_af19d00cf74d3dc54e2ba8ddd015d4dc6}\label{class_t_example1_log_model_af19d00cf74d3dc54e2ba8ddd015d4dc6}} 
+\index{T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}!f\+Refresh@{f\+Refresh}}
+\index{f\+Refresh@{f\+Refresh}!T\+Example1\+Log\+Model@{T\+Example1\+Log\+Model}}
+\subsubsection{\texorpdfstring{f\+Refresh}{fRefresh}}
+{\footnotesize\ttfamily std\+::mutex T\+Example1\+Log\+Model\+::f\+Refresh\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file example1\+Log\+Model.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+pr\+Example/\hyperlink{example1_log_model_8hpp}{example1\+Log\+Model.\+hpp}\item 
+pr\+Example/\hyperlink{example1_log_model_8cpp}{example1\+Log\+Model.\+cpp}\end{DoxyCompactItemize}

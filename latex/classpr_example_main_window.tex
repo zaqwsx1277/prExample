@@ -1,0 +1,522 @@
+\hypertarget{classpr_example_main_window}{}\section{pr\+Example\+Main\+Window Class Reference}
+\label{classpr_example_main_window}\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+
+
+{\ttfamily \#include $<$pr\+Example\+Main\+Window.\+hpp$>$}
+
+
+
+Inheritance diagram for pr\+Example\+Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classpr_example_main_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pr\+Example\+Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classpr_example_main_window__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpr_example_main_window_a46ef47aff2d6b2b511b24ceada6bbb20}{signal\+Clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpr_example_main_window_a7324b8ba9b5bc40a8895ac8971bc0192}{pr\+Example\+Main\+Window} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a7324b8ba9b5bc40a8895ac8971bc0192}{pr\+Example\+Main\+Window\+::pr\+Example\+Main\+Window} Конструктор класса для Примера 1 \end{DoxyCompactList}\item 
+\hyperlink{classpr_example_main_window_a0f04c65433b6de05dba55b26fb9fadba}{$\sim$pr\+Example\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a0f04c65433b6de05dba55b26fb9fadba}{pr\+Example\+Main\+Window\+::$\sim$pr\+Example\+Main\+Window} Деструктор класса \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991}{page\+Num} \{ \hyperlink{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991a8ccb8e01eb3c2201be1e9d5f5771207d}{pg\+Example1} = 0, 
+\hyperlink{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991adc0a16291dd63c5e9f21f1def1e33fa1}{pg\+Example2} = 1
+ \}\begin{DoxyCompactList}\small\item\em список и последовательность закладок \end{DoxyCompactList}
+\item 
+enum \hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+State} \{ \hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca2d9733465da996ba5c35c393c9d2880e}{st\+Unknown}, 
+\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028caae61ac2ae5065b3aae1405ae3510c9ba}{st\+Stop}, 
+\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca5d5d6bf62aaa2f12854361685bbb54e7}{st\+Start\+Example1}, 
+\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca3d0c63cd76e8bec38a1ae7257b4df289}{st\+Start\+Example2}
+ \}\begin{DoxyCompactList}\small\item\em Состояния проекта \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpr_example_main_window_a2b65976cef6b714c6310ffb7156001c0}{on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed} (const Q\+String \&arg1)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a2b65976cef6b714c6310ffb7156001c0}{pr\+Example\+Main\+Window\+::on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed} Слот проверяющий генерируемое число. \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a0ea28061dcfe0502e84873ca91553a8b}{on\+\_\+tool\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a0ea28061dcfe0502e84873ca91553a8b}{pr\+Example\+Main\+Window\+::on\+\_\+tool\+Button\+\_\+clicked} Слот обрабатывающий нажатие кнопки автоматической генерации искомого числа \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a3868049ba73b562b78b1518114bd26b0}{on\+\_\+btn\+Total\+Iterations\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a3868049ba73b562b78b1518114bd26b0}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Total\+Iterations\+\_\+clicked} Слот генерирующий общее количество итераций \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_ae70fafa427f7bf3c30683ad3e3760d12}{on\+\_\+btn\+Generation\+Frequency\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_ae70fafa427f7bf3c30683ad3e3760d12}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Generation\+Frequency\+\_\+clicked} Слот генерирующий квант времени, за который должно быть сгенерированно случайное число в потоке \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a9c6a9bfaa53a655479b13d8da936c9ab}{on\+\_\+btn\+Start\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a9c6a9bfaa53a655479b13d8da936c9ab}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Start\+\_\+clicked} Слот обрабатывающий нажатие на кнопку Старт/Стоп \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a60b5693aca8b86dafbcf64d9e641822f}{on\+\_\+example1\+Chech\+State} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a60b5693aca8b86dafbcf64d9e641822f}{pr\+Example\+Main\+Window\+::on\+\_\+example1\+Chech\+State} Слот проверяющий возможность запуска тестового примера \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a233e9d66312214a27a782870e2fd403e}{on\+\_\+btn\+Clear\+\_\+pressed} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a233e9d66312214a27a782870e2fd403e}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Clear\+\_\+pressed} Слот обрабатывающий нажатие на кнопку очистки данных \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_abd4dfff0de439f5afc286425a0508add}{slot\+Example1\+Clear} ()
+\begin{DoxyCompactList}\small\item\em pr\+Example\+Main\+Window\+::example1clear Слот для очистки формы \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a8575434cfb2b50fd78f73a8b06c43a1e}{slot\+Example1\+Timeout} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a8575434cfb2b50fd78f73a8b06c43a1e}{pr\+Example\+Main\+Window\+::slot\+Example1\+Timeout} Слот проверяющий завершение всех потоков \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpr_example_main_window_a4101c3f2b8ee5c1a33b3efc303993b7e}{init\+Firm} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a4101c3f2b8ee5c1a33b3efc303993b7e}{pr\+Example\+Main\+Window\+::init\+Firm} Инициализация формы \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a05eb7e290281288b56ac087490bcd191}{make\+Connect} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a05eb7e290281288b56ac087490bcd191}{pr\+Example\+Main\+Window\+::make\+Connect} Формирует все нужные конекты \end{DoxyCompactList}\item 
+\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+State} \hyperlink{classpr_example_main_window_accee9261c93ec98afa66d5e51642a34e}{get\+State} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_accee9261c93ec98afa66d5e51642a34e}{pr\+Example\+Main\+Window\+::get\+State} Возвращает состояние выполнения проекта \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a81e478c0b0696290226327898a62b53a}{set\+State} (\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+State})
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a81e478c0b0696290226327898a62b53a}{pr\+Example\+Main\+Window\+::set\+State} Устанавливает состояние проекта \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_abbb7d4ab8838740081570c5c6b2a8f60}{set\+Form\+State} (\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+Example\+Main\+Window\+::pr\+State})
+\begin{DoxyCompactList}\small\item\em pr\+Example\+Main\+Window\+::set\+Example1\+Form\+State Установка видимости элементов формы в зависимости от состояния \end{DoxyCompactList}\item 
+bool \hyperlink{classpr_example_main_window_a242f1253935a9602cd56d79611790d6f}{example1\+Chech\+State} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a242f1253935a9602cd56d79611790d6f}{pr\+Example\+Main\+Window\+::example1\+Chech\+State} Проверяет возможность запуска примера на закладке \char`\"{}Пример 1\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{classpr_example_main_window_a65103d7c51e146ffa3f99d999312e38a}{thread\+Func} (quint8, quint8)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpr_example_main_window_a65103d7c51e146ffa3f99d999312e38a}{pr\+Example\+Main\+Window\+::thread\+Func} метод запускаемай в потоке \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::pr\+Example\+Main\+Window $\ast$ \hyperlink{classpr_example_main_window_a834d83295e9242720576962487363786}{ui}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_t_example1_log_model}{T\+Example1\+Log\+Model} $>$ \hyperlink{classpr_example_main_window_a84daab325be29ff2752e7237495b6ea6}{f\+Prt\+Example\+Model} \{nullptr\}
+\item 
+std\+::unique\+\_\+ptr$<$ Q\+Timer $>$ \hyperlink{classpr_example_main_window_ac1eb03a4265e3a97107cb98958915026}{f\+Ptr\+Example1\+Timer} \{nullptr\}
+\item 
+std\+::mt19937 \hyperlink{classpr_example_main_window_a269d30d2d31fe7d0893850776e10888f}{f\+Gen\+Random}
+\item 
+\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+State} \hyperlink{classpr_example_main_window_af1e816ef2265cf59efcb65f59a16cc7d}{f\+State} \{\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca2d9733465da996ba5c35c393c9d2880e}{st\+Unknown}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file pr\+Example\+Main\+Window.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991}\label{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!page\+Num@{page\+Num}}
+\index{page\+Num@{page\+Num}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{page\+Num}{pageNum}}
+{\footnotesize\ttfamily enum \hyperlink{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991}{pr\+Example\+Main\+Window\+::page\+Num}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+список и последовательность закладок 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pg\+Example1@{pg\+Example1}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!pg\+Example1@{pg\+Example1}}}\mbox{\Hypertarget{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991a8ccb8e01eb3c2201be1e9d5f5771207d}\label{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991a8ccb8e01eb3c2201be1e9d5f5771207d}} 
+pg\+Example1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pg\+Example2@{pg\+Example2}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!pg\+Example2@{pg\+Example2}}}\mbox{\Hypertarget{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991adc0a16291dd63c5e9f21f1def1e33fa1}\label{classpr_example_main_window_aeaa415451eb7f9e8fa9d2966cc5c1991adc0a16291dd63c5e9f21f1def1e33fa1}} 
+pg\+Example2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 42 of file pr\+Example\+Main\+Window.\+hpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}\label{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!pr\+State@{pr\+State}}
+\index{pr\+State@{pr\+State}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{pr\+State}{prState}}
+{\footnotesize\ttfamily enum \hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+Example\+Main\+Window\+::pr\+State}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Состояния проекта 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{st\+Unknown@{st\+Unknown}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!st\+Unknown@{st\+Unknown}}}\mbox{\Hypertarget{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca2d9733465da996ba5c35c393c9d2880e}\label{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca2d9733465da996ba5c35c393c9d2880e}} 
+st\+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{st\+Stop@{st\+Stop}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!st\+Stop@{st\+Stop}}}\mbox{\Hypertarget{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028caae61ac2ae5065b3aae1405ae3510c9ba}\label{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028caae61ac2ae5065b3aae1405ae3510c9ba}} 
+st\+Stop&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{st\+Start\+Example1@{st\+Start\+Example1}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!st\+Start\+Example1@{st\+Start\+Example1}}}\mbox{\Hypertarget{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca5d5d6bf62aaa2f12854361685bbb54e7}\label{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca5d5d6bf62aaa2f12854361685bbb54e7}} 
+st\+Start\+Example1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{st\+Start\+Example2@{st\+Start\+Example2}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!st\+Start\+Example2@{st\+Start\+Example2}}}\mbox{\Hypertarget{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca3d0c63cd76e8bec38a1ae7257b4df289}\label{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca3d0c63cd76e8bec38a1ae7257b4df289}} 
+st\+Start\+Example2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 44 of file pr\+Example\+Main\+Window.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpr_example_main_window_a7324b8ba9b5bc40a8895ac8971bc0192}\label{classpr_example_main_window_a7324b8ba9b5bc40a8895ac8971bc0192}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{pr\+Example\+Main\+Window()}{prExampleMainWindow()}}
+{\footnotesize\ttfamily pr\+Example\+Main\+Window\+::pr\+Example\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classpr_example_main_window_a7324b8ba9b5bc40a8895ac8971bc0192}{pr\+Example\+Main\+Window\+::pr\+Example\+Main\+Window} Конструктор класса для Примера 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a0f04c65433b6de05dba55b26fb9fadba}\label{classpr_example_main_window_a0f04c65433b6de05dba55b26fb9fadba}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!````~pr\+Example\+Main\+Window@{$\sim$pr\+Example\+Main\+Window}}
+\index{````~pr\+Example\+Main\+Window@{$\sim$pr\+Example\+Main\+Window}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{$\sim$pr\+Example\+Main\+Window()}{~prExampleMainWindow()}}
+{\footnotesize\ttfamily pr\+Example\+Main\+Window\+::$\sim$pr\+Example\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classpr_example_main_window_a0f04c65433b6de05dba55b26fb9fadba}{pr\+Example\+Main\+Window\+::$\sim$pr\+Example\+Main\+Window} Деструктор класса 
+
+
+
+Definition at line 44 of file pr\+Example\+Main\+Window.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpr_example_main_window_a242f1253935a9602cd56d79611790d6f}\label{classpr_example_main_window_a242f1253935a9602cd56d79611790d6f}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!example1\+Chech\+State@{example1\+Chech\+State}}
+\index{example1\+Chech\+State@{example1\+Chech\+State}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{example1\+Chech\+State()}{example1ChechState()}}
+{\footnotesize\ttfamily bool pr\+Example\+Main\+Window\+::example1\+Chech\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{classpr_example_main_window_a242f1253935a9602cd56d79611790d6f}{pr\+Example\+Main\+Window\+::example1\+Chech\+State} Проверяет возможность запуска примера на закладке \char`\"{}Пример 1\char`\"{} 
+
+\begin{DoxyReturn}{Returns}
+Если все поля заполнены, то возвращается true, в противном случае false 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_accee9261c93ec98afa66d5e51642a34e}\label{classpr_example_main_window_accee9261c93ec98afa66d5e51642a34e}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{get\+State()}{getState()}}
+{\footnotesize\ttfamily \hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+Example\+Main\+Window\+::pr\+State} pr\+Example\+Main\+Window\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{classpr_example_main_window_accee9261c93ec98afa66d5e51642a34e}{pr\+Example\+Main\+Window\+::get\+State} Возвращает состояние выполнения проекта 
+
+\begin{DoxyReturn}{Returns}
+Состояние проекта 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a4101c3f2b8ee5c1a33b3efc303993b7e}\label{classpr_example_main_window_a4101c3f2b8ee5c1a33b3efc303993b7e}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!init\+Firm@{init\+Firm}}
+\index{init\+Firm@{init\+Firm}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{init\+Firm()}{initFirm()}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::init\+Firm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{classpr_example_main_window_a4101c3f2b8ee5c1a33b3efc303993b7e}{pr\+Example\+Main\+Window\+::init\+Firm} Инициализация формы 
+
+
+
+Definition at line 52 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a05eb7e290281288b56ac087490bcd191}\label{classpr_example_main_window_a05eb7e290281288b56ac087490bcd191}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!make\+Connect@{make\+Connect}}
+\index{make\+Connect@{make\+Connect}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{make\+Connect()}{makeConnect()}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::make\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{classpr_example_main_window_a05eb7e290281288b56ac087490bcd191}{pr\+Example\+Main\+Window\+::make\+Connect} Формирует все нужные конекты 
+
+
+
+Definition at line 84 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a233e9d66312214a27a782870e2fd403e}\label{classpr_example_main_window_a233e9d66312214a27a782870e2fd403e}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!on\+\_\+btn\+Clear\+\_\+pressed@{on\+\_\+btn\+Clear\+\_\+pressed}}
+\index{on\+\_\+btn\+Clear\+\_\+pressed@{on\+\_\+btn\+Clear\+\_\+pressed}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+btn\+Clear\+\_\+pressed}{on\_btnClear\_pressed}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::on\+\_\+btn\+Clear\+\_\+pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_a233e9d66312214a27a782870e2fd403e}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Clear\+\_\+pressed} Слот обрабатывающий нажатие на кнопку очистки данных 
+
+
+
+Definition at line 273 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_ae70fafa427f7bf3c30683ad3e3760d12}\label{classpr_example_main_window_ae70fafa427f7bf3c30683ad3e3760d12}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!on\+\_\+btn\+Generation\+Frequency\+\_\+clicked@{on\+\_\+btn\+Generation\+Frequency\+\_\+clicked}}
+\index{on\+\_\+btn\+Generation\+Frequency\+\_\+clicked@{on\+\_\+btn\+Generation\+Frequency\+\_\+clicked}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+btn\+Generation\+Frequency\+\_\+clicked}{on\_btnGenerationFrequency\_clicked}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::on\+\_\+btn\+Generation\+Frequency\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_ae70fafa427f7bf3c30683ad3e3760d12}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Generation\+Frequency\+\_\+clicked} Слот генерирующий квант времени, за который должно быть сгенерированно случайное число в потоке 
+
+
+
+Definition at line 213 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a9c6a9bfaa53a655479b13d8da936c9ab}\label{classpr_example_main_window_a9c6a9bfaa53a655479b13d8da936c9ab}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!on\+\_\+btn\+Start\+\_\+clicked@{on\+\_\+btn\+Start\+\_\+clicked}}
+\index{on\+\_\+btn\+Start\+\_\+clicked@{on\+\_\+btn\+Start\+\_\+clicked}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+btn\+Start\+\_\+clicked}{on\_btnStart\_clicked}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::on\+\_\+btn\+Start\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_a9c6a9bfaa53a655479b13d8da936c9ab}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Start\+\_\+clicked} Слот обрабатывающий нажатие на кнопку Старт/Стоп 
+
+
+
+Definition at line 223 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a3868049ba73b562b78b1518114bd26b0}\label{classpr_example_main_window_a3868049ba73b562b78b1518114bd26b0}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!on\+\_\+btn\+Total\+Iterations\+\_\+clicked@{on\+\_\+btn\+Total\+Iterations\+\_\+clicked}}
+\index{on\+\_\+btn\+Total\+Iterations\+\_\+clicked@{on\+\_\+btn\+Total\+Iterations\+\_\+clicked}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+btn\+Total\+Iterations\+\_\+clicked}{on\_btnTotalIterations\_clicked}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::on\+\_\+btn\+Total\+Iterations\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_a3868049ba73b562b78b1518114bd26b0}{pr\+Example\+Main\+Window\+::on\+\_\+btn\+Total\+Iterations\+\_\+clicked} Слот генерирующий общее количество итераций 
+
+
+
+Definition at line 203 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a60b5693aca8b86dafbcf64d9e641822f}\label{classpr_example_main_window_a60b5693aca8b86dafbcf64d9e641822f}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!on\+\_\+example1\+Chech\+State@{on\+\_\+example1\+Chech\+State}}
+\index{on\+\_\+example1\+Chech\+State@{on\+\_\+example1\+Chech\+State}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+example1\+Chech\+State}{on\_example1ChechState}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::on\+\_\+example1\+Chech\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_a60b5693aca8b86dafbcf64d9e641822f}{pr\+Example\+Main\+Window\+::on\+\_\+example1\+Chech\+State} Слот проверяющий возможность запуска тестового примера 
+
+
+
+Definition at line 265 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a2b65976cef6b714c6310ffb7156001c0}\label{classpr_example_main_window_a2b65976cef6b714c6310ffb7156001c0}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed@{on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed}}
+\index{on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed@{on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed}{on\_spRandomNumeric\_textChanged}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_a2b65976cef6b714c6310ffb7156001c0}{pr\+Example\+Main\+Window\+::on\+\_\+sp\+Random\+Numeric\+\_\+text\+Changed} Слот проверяющий генерируемое число. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg1} & Вводимая строка \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 184 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a0ea28061dcfe0502e84873ca91553a8b}\label{classpr_example_main_window_a0ea28061dcfe0502e84873ca91553a8b}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!on\+\_\+tool\+Button\+\_\+clicked@{on\+\_\+tool\+Button\+\_\+clicked}}
+\index{on\+\_\+tool\+Button\+\_\+clicked@{on\+\_\+tool\+Button\+\_\+clicked}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+tool\+Button\+\_\+clicked}{on\_toolButton\_clicked}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::on\+\_\+tool\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_a0ea28061dcfe0502e84873ca91553a8b}{pr\+Example\+Main\+Window\+::on\+\_\+tool\+Button\+\_\+clicked} Слот обрабатывающий нажатие кнопки автоматической генерации искомого числа 
+
+
+
+Definition at line 193 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_abbb7d4ab8838740081570c5c6b2a8f60}\label{classpr_example_main_window_abbb7d4ab8838740081570c5c6b2a8f60}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!set\+Form\+State@{set\+Form\+State}}
+\index{set\+Form\+State@{set\+Form\+State}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{set\+Form\+State()}{setFormState()}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::set\+Form\+State (\begin{DoxyParamCaption}\item[{\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+Example\+Main\+Window\+::pr\+State}}]{in\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pr\+Example\+Main\+Window\+::set\+Example1\+Form\+State Установка видимости элементов формы в зависимости от состояния 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+State} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a81e478c0b0696290226327898a62b53a}\label{classpr_example_main_window_a81e478c0b0696290226327898a62b53a}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{set\+State()}{setState()}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::set\+State (\begin{DoxyParamCaption}\item[{\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+Example\+Main\+Window\+::pr\+State}}]{in\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{classpr_example_main_window_a81e478c0b0696290226327898a62b53a}{pr\+Example\+Main\+Window\+::set\+State} Устанавливает состояние проекта 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+State} & Устанавливаемое состояние \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a46ef47aff2d6b2b511b24ceada6bbb20}\label{classpr_example_main_window_a46ef47aff2d6b2b511b24ceada6bbb20}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!signal\+Clear@{signal\+Clear}}
+\index{signal\+Clear@{signal\+Clear}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{signal\+Clear}{signalClear}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::signal\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classpr_example_main_window_abd4dfff0de439f5afc286425a0508add}\label{classpr_example_main_window_abd4dfff0de439f5afc286425a0508add}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!slot\+Example1\+Clear@{slot\+Example1\+Clear}}
+\index{slot\+Example1\+Clear@{slot\+Example1\+Clear}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{slot\+Example1\+Clear}{slotExample1Clear}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::slot\+Example1\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+pr\+Example\+Main\+Window\+::example1clear Слот для очистки формы 
+
+
+
+Definition at line 100 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a8575434cfb2b50fd78f73a8b06c43a1e}\label{classpr_example_main_window_a8575434cfb2b50fd78f73a8b06c43a1e}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!slot\+Example1\+Timeout@{slot\+Example1\+Timeout}}
+\index{slot\+Example1\+Timeout@{slot\+Example1\+Timeout}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{slot\+Example1\+Timeout}{slotExample1Timeout}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::slot\+Example1\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\hyperlink{classpr_example_main_window_a8575434cfb2b50fd78f73a8b06c43a1e}{pr\+Example\+Main\+Window\+::slot\+Example1\+Timeout} Слот проверяющий завершение всех потоков 
+
+
+
+Definition at line 320 of file pr\+Example\+Main\+Window.\+cpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a65103d7c51e146ffa3f99d999312e38a}\label{classpr_example_main_window_a65103d7c51e146ffa3f99d999312e38a}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!thread\+Func@{thread\+Func}}
+\index{thread\+Func@{thread\+Func}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{thread\+Func()}{threadFunc()}}
+{\footnotesize\ttfamily void pr\+Example\+Main\+Window\+::thread\+Func (\begin{DoxyParamCaption}\item[{quint8}]{in\+Numeric,  }\item[{quint8}]{in\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{classpr_example_main_window_a65103d7c51e146ffa3f99d999312e38a}{pr\+Example\+Main\+Window\+::thread\+Func} метод запускаемай в потоке 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Number} & Искомое число \\
+\hline
+{\em in\+Time} & Квант времени за который должно быть сгенерированно число \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 283 of file pr\+Example\+Main\+Window.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpr_example_main_window_a269d30d2d31fe7d0893850776e10888f}\label{classpr_example_main_window_a269d30d2d31fe7d0893850776e10888f}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!f\+Gen\+Random@{f\+Gen\+Random}}
+\index{f\+Gen\+Random@{f\+Gen\+Random}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{f\+Gen\+Random}{fGenRandom}}
+{\footnotesize\ttfamily std\+::mt19937 pr\+Example\+Main\+Window\+::f\+Gen\+Random\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 50 of file pr\+Example\+Main\+Window.\+hpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a84daab325be29ff2752e7237495b6ea6}\label{classpr_example_main_window_a84daab325be29ff2752e7237495b6ea6}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!f\+Prt\+Example\+Model@{f\+Prt\+Example\+Model}}
+\index{f\+Prt\+Example\+Model@{f\+Prt\+Example\+Model}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{f\+Prt\+Example\+Model}{fPrtExampleModel}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_t_example1_log_model}{T\+Example1\+Log\+Model}$>$ pr\+Example\+Main\+Window\+::f\+Prt\+Example\+Model \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 48 of file pr\+Example\+Main\+Window.\+hpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_ac1eb03a4265e3a97107cb98958915026}\label{classpr_example_main_window_ac1eb03a4265e3a97107cb98958915026}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!f\+Ptr\+Example1\+Timer@{f\+Ptr\+Example1\+Timer}}
+\index{f\+Ptr\+Example1\+Timer@{f\+Ptr\+Example1\+Timer}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{f\+Ptr\+Example1\+Timer}{fPtrExample1Timer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$Q\+Timer$>$ pr\+Example\+Main\+Window\+::f\+Ptr\+Example1\+Timer \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 49 of file pr\+Example\+Main\+Window.\+hpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_af1e816ef2265cf59efcb65f59a16cc7d}\label{classpr_example_main_window_af1e816ef2265cf59efcb65f59a16cc7d}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!f\+State@{f\+State}}
+\index{f\+State@{f\+State}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{f\+State}{fState}}
+{\footnotesize\ttfamily \hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028c}{pr\+State} pr\+Example\+Main\+Window\+::f\+State \{\hyperlink{classpr_example_main_window_ac6ea07691b05604b1dda8ec6263c028ca2d9733465da996ba5c35c393c9d2880e}{st\+Unknown}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 56 of file pr\+Example\+Main\+Window.\+hpp.
+
+\mbox{\Hypertarget{classpr_example_main_window_a834d83295e9242720576962487363786}\label{classpr_example_main_window_a834d83295e9242720576962487363786}} 
+\index{pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}!ui@{ui}}
+\index{ui@{ui}!pr\+Example\+Main\+Window@{pr\+Example\+Main\+Window}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::pr\+Example\+Main\+Window$\ast$ pr\+Example\+Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 46 of file pr\+Example\+Main\+Window.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+pr\+Example/\hyperlink{pr_example_main_window_8hpp}{pr\+Example\+Main\+Window.\+hpp}\item 
+pr\+Example/\hyperlink{pr_example_main_window_8cpp}{pr\+Example\+Main\+Window.\+cpp}\end{DoxyCompactItemize}
