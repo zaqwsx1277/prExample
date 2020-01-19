@@ -35,7 +35,7 @@ prExampleMainWindow::prExampleMainWindow(QWidget *parent) :
     makeConnect () ;
 
     fState = prExampleMainWindow::stStop ;
-    fGenRandom.seed(time (0)) ;                         // Инициализируем генератор ГСЧ
+    fGenRandom.seed(time (nullptr)) ;                   // Инициализируем генератор ГСЧ
 
     emit signalClear () ;
 
