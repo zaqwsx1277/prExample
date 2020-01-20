@@ -60,7 +60,7 @@ void prExampleMainWindow::initFirm ()
     ui -> spGbExample1 -> setStyleSheet("QGroupBox {border: 1px solid gray; border-radius: 3px; margin: 10px; padding: 4px; }"
                                         "QGroupBox::title {subcontrol-origin: margin; subcontrol-position: top left; padding: 4px; left: 20px; }");
 
-    ui -> spRandomNumeric -> setValidator( new QRegExpValidator( QRegExp( "[0-9]{2}")));   // задаём все необходимые регулярные выражения
+    ui -> spRandomNumeric -> setValidator( new QRegExpValidator( QRegExp( "^([0-9]|1[0])$")));   // задаём все необходимые регулярные выражения
     ui -> spThreadCount -> setValidator( new QRegExpValidator( QRegExp( "[0-9]{2}")));
     ui -> spTotalIterations -> setValidator( new QRegExpValidator( QRegExp( "[0-9]{3}")));
     ui -> spGenerationFrequency -> setValidator( new QRegExpValidator( QRegExp( "[1-9]{3}")));
@@ -182,16 +182,6 @@ void prExampleMainWindow::setFormState (prExampleMainWindow::prState inState)
 }
 //---------------------------------------------------------------------------
 /*!
- * \brief prExampleMainWindow::on_spRandomNumeric_textChanged   Слот проверяющий генерируемое число.
- * \param arg1  Вводимая строка
- */
-void prExampleMainWindow::on_spRandomNumeric_textChanged(const QString &arg1)
-{
-    if (arg1.toInt() > 10) ui -> spRandomNumeric -> setText("10") ;
-    if (arg1.toInt() == 0) ui -> spRandomNumeric -> clear () ;
-}
-//---------------------------------------------------------------------------
-/*!
  * \brief prExampleMainWindow::on_toolButton_clicked    Слот обрабатывающий нажатие кнопки автоматической генерации искомого числа
  */
 void prExampleMainWindow::on_toolButton_clicked()
@@ -305,38 +295,34 @@ void prExampleMainWindow::threadFunc (quint8 inNumeric, quint8 inTime)
     exampleDefine::example1LogData logData ;
     logData.threadId = std::this_thread::get_id() ;
 
-    try {
-        while (true) {                                                  // Основной цикл в котором подбирается число
-            std::uniform_int_distribution<quint32> rangeTime (1,inTime) ;
-            quint32 waitTime = rangeTime (fGenRandom) ; ;               // Выполняем задержку генерации числа
-            std::this_thread::sleep_for (std::chrono::seconds (waitTime)) ;
+    while (true) {                                                  // Основной цикл в котором подбирается число
+        std::uniform_int_distribution<quint32> rangeTime (1,inTime) ;
+        quint32 waitTime = rangeTime (fGenRandom) ;               // Выполняем задержку генерации числа
+        std::this_thread::sleep_for (std::chrono::seconds (waitTime)) ;
 
-            logData.time = QTime::currentTime() ;
-            if (exampleDefine::isStop) {                                // Прекращаем выполнение задания при нажатии на кнопку Стоп
-                logData.numeric = 0 ;
-                logData.reasonExit = exampleDefine::reasonExitStop  ;
-                throw 1 ;
-            }
-
-            if (exampleDefine::totalIteration.fetch_sub (1) > 0) {
-                std::uniform_int_distribution<quint32> rangeNumeric (1,10) ; // Генерируем число и если оно совпадает с требуемым, то завершаем цикл
-                logData.numeric = rangeNumeric (fGenRandom) ;
-                if (logData.numeric == inNumeric) {
-                    logData.reasonExit = exampleDefine::reasonExitEqual  ;
-                    throw 1 ;
-                }
-                fPrtExampleModel -> push_back (logData);
-            }
-              else {     // Завершаем цикл по достижению максимального количества итераций
-                logData.numeric = 0 ;
-                logData.reasonExit = exampleDefine::reasonExitFailure ;
-                throw 1 ;
-              }
+        logData.time = QTime::currentTime() ;
+        if (exampleDefine::isStop) {                                // Прекращаем выполнение задания при нажатии на кнопку Стоп
+            logData.numeric = 0 ;
+            logData.reasonExit = exampleDefine::reasonExitStop  ;
+            break ;
         }
+
+        if (exampleDefine::totalIteration.fetch_sub (1) > 0) {
+            std::uniform_int_distribution<quint32> rangeNumeric (1,10) ; // Генерируем число и если оно совпадает с требуемым, то завершаем цикл
+            logData.numeric = rangeNumeric (fGenRandom) ;
+            if (logData.numeric == inNumeric) {
+                logData.reasonExit = exampleDefine::reasonExitEqual  ;
+                break ;
+            }
+            fPrtExampleModel -> push_back (logData);
+        }
+          else {     // Завершаем цикл по достижению максимального количества итераций
+            logData.numeric = 0 ;
+            logData.reasonExit = exampleDefine::reasonExitFailure ;
+            break ;
+          }
     }
-      catch (...) {
-        fPrtExampleModel -> push_back (logData);
-      }
+    fPrtExampleModel -> push_back (logData);
     exampleDefine::threadCount.fetch_sub(1) ;
 }
 //---------------------------------------------------------------------------
@@ -357,7 +343,7 @@ void prExampleMainWindow::slotExample1Timeout ()
  */
 void prExampleMainWindow::slotWaitTimeout ()
 {
-    exampleDefine::threadCount.store(0); ;
+    exampleDefine::threadCount.store(0);
 }
 //---------------------------------------------------------------------------
 /*!
@@ -373,6 +359,25 @@ void prExampleMainWindow::refreshLog ()
         fPrtExampleModel -> refreshView() ;         // Обновляем отображение данных
         QApplication::processEvents() ;
         exampleDefine::isBloked = false ;
+    }
+}
+//---------------------------------------------------------------------------
+/*!
+ * \brief prExampleMainWindow::closeEvent   Обработка закрытия окна
+ * \param inEvent
+ */
+void prExampleMainWindow::closeEvent (QCloseEvent *inEvent)
+{
+    switch (fState) {
+      case stUnknown:
+      case stStop:
+        inEvent -> accept() ;
+      break;
+
+      default:
+        QMessageBox::information(this, exampleDefine::messageTitle, exampleDefine::messageErrClose);
+        inEvent -> ignore() ;
+      break;
     }
 }
 //---------------------------------------------------------------------------

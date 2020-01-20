@@ -40,8 +40,9 @@ namespace exampleDefine {
     const QString reasonExitEqual {"Получено совпадающее число"} ;
     const QString reasonExitStop {"Задание прекращено пользователем"} ;
 
-    const QString messageTitle {"Сообщение"} ;  //  Сообщения о завершении всех потоков
+    const QString messageTitle {"Сообщение"} ;  //  Сообщения о завершении всех потоков :
     const QString messageText {"Все потоки завершились"} ;
+    const QString messageErrClose {"Есть незавершенные потоки"} ;
 
             ///  Описание данных отображаемых в "Пример 1"
     struct example1LogData {

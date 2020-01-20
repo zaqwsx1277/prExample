@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QApplication>
+#include <QCloseEvent>
 
 #include <memory>
 #include <random>
@@ -27,7 +28,6 @@ public:
     ~prExampleMainWindow();
 
 private slots:
-    void on_spRandomNumeric_textChanged(const QString &arg1);
     void on_toolButton_clicked();
     void on_btnTotalIterations_clicked();
     void on_btnGenerationFrequency_clicked();
@@ -39,10 +39,9 @@ private slots:
     void slotWaitTimeout () ;           // Слот завершающий задание по завершению времени ожидания
 
 private:
-                                    /// список и последовательность закладок
-    enum pageNum {pgExample1= 0, pgExample2 = 1} ;
-                                    /// Состояния проекта
-    enum prState {stUnknown, stStop, stStartExample1, stStartExample2} ;
+
+    enum pageNum {pgExample1= 0, pgExample2 = 1} ;  ///< список и последовательность закладок
+    enum prState {stUnknown, stStop, stStartExample1, stStartExample2} ; ///< Состояния проекта
 
     Ui::prExampleMainWindow *ui;
 
@@ -62,6 +61,8 @@ private:
     bool example1ChechState () ;    // Проверяет возможность запуска примера example1
     void threadFunc (quint8, quint8) ; // метод запускаемый в потоке
     void refreshLog () ;            // Обновление отображения данных
+
+    void closeEvent (QCloseEvent *) ; // Обработка закрытия окна
 
 signals:
     void signalClear () ;           // Сигнал очистки всех данных
